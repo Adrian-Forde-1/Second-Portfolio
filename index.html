@@ -29,6 +29,9 @@
               ><span class="peach-color">A</span>drian
               <span class="peach-color">F</span>orde</a
             >
+
+            <i class="fas fa-bars hamburger"></i>
+
             <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li><a href="#aboutme">About Me</a></li>
               <li><a href="#skills">Skills</a></li>
@@ -37,24 +40,23 @@
           </div>
         </div>
       </nav>
-
       <!-- Header -->
       <div class="container h-100">
         <div class="row h-100">
           <div class="col s12 header-word-content h-100">
             <h3 class="right-align name">
-              <span>A</span>
-              <span>d</span>
-              <span>r</span>
-              <span>i</span>
-              <span>a</span>
-              <span class="end-of-firstname">n</span>
+              <span id="myname">A</span>
+              <span id="myname">d</span>
+              <span id="myname">r</span>
+              <span id="myname">i</span>
+              <span id="myname">a</span>
+              <span id="myname" class="end-of-firstname">n</span>
               <span>&nbsp;</span>
-              <span>F</span>
-              <span>o</span>
-              <span>r</span>
-              <span>d</span>
-              <span>e</span>
+              <span id="myname">F</span>
+              <span id="myname">o</span>
+              <span id="myname">r</span>
+              <span id="myname">d</span>
+              <span id="myname">e</span>
             </h3>
             <h5 class="right-align">Full Stack Web Developer</h5>
             <a href="#contactme" class="cta">Contact Me</a>
@@ -69,9 +71,21 @@
         </div>
       </div>
 
-      <div class="header-graphic-left"></div>
-      <div class="header-graphic-mid"></div>
-      <div class="header-graphic-right"></div>
+      <div
+        class="header-graphic-left"
+        id="scroll"
+        data-parallax-rate="-0.5"
+      ></div>
+      <div
+        class="header-graphic-mid"
+        id="scroll"
+        data-parallax-rate="-0.1"
+      ></div>
+      <div
+        class="header-graphic-right"
+        id="scroll"
+        data-parallax-rate="-2"
+      ></div>
     </header>
 
     <!-- About Section Start -->
@@ -98,7 +112,7 @@
             The ability to make my ideas
             <span class="peach-color">appear</span> before my eyes quickly and
             to share them with others on a website that I created was something
-            I previously havent encountered<span class="peach-color">.</span
+            I previously haven't encountered<span class="peach-color">.</span
             ><br />
             <br />
             Ever since I found this
@@ -107,15 +121,22 @@
             be<span class="peach-color">.</span>
             <br />
             <br />
-            I <span class="peach-color">know</span> many JS fundamentals and
+            I have <span class="peach-color">strong</span> JS fundamentals and
             have experience in React, Node and MongoDB but I’m
-            <span class="peach-color">always</span> trying to improve my skills
-            so I that I’ll be able to
-            <span class="peach-color">tackle</span> any problem thrown my
-            way<span class="peach-color">.</span>
+            <span class="peach-color">always</span> improving my skills so I
+            that I’ll be able to <span class="peach-color">tackle</span> any
+            problem thrown my way<span class="peach-color">.</span>
           </p>
-          <div class="about-me-graphic-left"></div>
-          <div class="about-me-graphic-right"></div>
+          <div
+            class="about-me-graphic-left"
+            id="about-dot"
+            data-parallax-scroll="-1"
+          ></div>
+          <div
+            class="about-me-graphic-right"
+            id="about-dot"
+            data-parallax-scroll="-1.5"
+          ></div>
         </div>
       </div>
     </section>
@@ -262,6 +283,12 @@
       </h3>
     </footer>
     <!-- Footer End -->
+
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/b13fec7300.js"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="script.js"></script>
   </body>
