@@ -615,6 +615,13 @@ footer h3 {
   color: white;
 }
 
+.copyright {
+  display: block;
+  text-align: center;
+  margin: 80px auto auto auto;
+  color: lightgrey;
+}
+
 @media screen and (max-width: 992px) {
   .hamburger {
     display: block;
