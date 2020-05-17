@@ -38,6 +38,18 @@ nav {
   }
 }
 
+.hamburger {
+  position: fixed;
+  right: 7.5%;
+  display: none;
+  visibility: hidden;
+  font-size: 24px !important;
+  cursor: pointer;
+  z-index: 1000;
+
+  color: white !important;
+}
+
 header {
   height: 100vh;
   position: relative;
@@ -110,6 +122,13 @@ section {
 //Utility End
 
 //Header Start
+
+.nav-wrapper {
+  i {
+    height: 64px;
+    line-height: 64px;
+  }
+}
 
 .name {
   white-space: nowrap;
@@ -188,15 +207,14 @@ section {
 }
 
 .header-graphic-left {
-  width: 100%;
+  width: 25%;
   height: 80%;
   background-image: url('./imgs/Header_Graphic_Left.svg');
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 0%;
-  transform: translateY(-50%);
   z-index: -1;
 }
 
@@ -322,6 +340,7 @@ section {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
+  opacity: 0.6;
   top: 0%;
   left: -5%;
   // transform: translateY(-50%);
@@ -333,6 +352,7 @@ section {
   background-image: url('./imgs/Project_Graphic_Mid.svg');
   background-size: contain;
   background-repeat: no-repeat;
+  opacity: 0.8;
   position: absolute;
   top: 35%;
   left: 65%;
@@ -341,14 +361,14 @@ section {
 }
 .project-graphic-right {
   width: 15%;
-  height: 25%;
+  height: 20%;
   background-image: url('./imgs/Project_Graphic_Right.svg');
   background-size: contain;
+  opacity: 0.5;
   background-repeat: no-repeat;
   position: absolute;
-  top: 80%;
+  bottom: -10%;
   right: -5%;
-  // transform: translateY(-50%);
   z-index: -1;
 }
 
@@ -427,6 +447,7 @@ section {
 
 .individual-project-information {
   h3 {
+    white-space: nowrap;
     text-align: center;
     color: $peach-color;
     font-size: 32px;
@@ -458,6 +479,10 @@ section {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+
+  h5 {
+    color: $peach-color;
+  }
   p {
     &:nth-of-type(1) {
       font-weight: 300;
@@ -567,10 +592,14 @@ footer {
 
 @media screen and (max-width: 992px) {
   //Header Start
+  .hamburger {
+    display: block;
+    visibility: visible;
+  }
   .header-graphic-left {
     width: 60%;
     height: 60%;
-    top: 40%;
+    top: 10%;
   }
   .header-graphic-mid {
     top: 25%;
@@ -582,6 +611,27 @@ footer {
     bottom: 3%;
     right: -1%;
   }
+
+  .nav-wrapper {
+    ul {
+      width: 250px !important;
+      height: 100vh !important;
+      position: fixed !important;
+      top: 0 !important;
+      right: 0 !important;
+      background-color: #181818 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-evenly !important;
+      align-items: center !important;
+      transform: translateX(250px);
+      transition: all 300ms ease-in-out;
+
+      &.nav-open {
+        transform: translateX(0px);
+      }
+    }
+  }
   //Header End
 
   //Skills Start
@@ -589,9 +639,24 @@ footer {
     height: 70%;
   }
   //Skills End
+
+  //Project Start
+  .project-graphic-right {
+    width: 20%;
+    bottom: -15%;
+  }
+  //Project End
 }
 
 @media screen and (max-width: 768px) {
+  //Header Start
+  .name {
+    span {
+      font-size: 36px;
+    }
+  }
+  //Header End
+
   //SKills Start
   .skills-group {
     height: 250px;
@@ -614,6 +679,30 @@ footer {
     height: 60%;
   }
   //Skills End
+
+  //Projects Start
+
+  .project-graphic-right {
+    width: 15%;
+    height: 12%;
+  }
+
+  .sort-algo-project-name {
+    font-size: 26px !important;
+  }
+
+  .individual-project-made-with {
+    ul {
+      li {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .individual-project-description-links-container {
+    font-size: 12px;
+  }
+  //Projects End
 }
 
 @media screen and (max-width: 600px) {
@@ -643,7 +732,7 @@ footer {
   .header-graphic-left {
     width: 70%;
     height: 50%;
-    top: 35%;
+    top: 10%;
   }
 
   .header-graphic-mid {
@@ -659,7 +748,9 @@ footer {
   }
 
   .name {
-    font-size: 32px;
+    span {
+      font-size: 32px;
+    }
   }
 
   .header-word-content {
@@ -693,6 +784,32 @@ footer {
   //Skills End
 
   //Projects Start
+  .sort-algo-project-name {
+    font-size: 20px !important;
+  }
+
+  .project-graphic-right {
+    width: 25%;
+    height: 15%;
+  }
+
+  .individual-project-information {
+    h3 {
+      font-size: 28px;
+    }
+  }
+
+  .individual-project-made-with {
+    h5 {
+      font-size: 20px;
+    }
+  }
+
+  .individual-project-description-links-container {
+    h5 {
+      font-size: 20px;
+    }
+  }
   .project-type-title {
     font-size: 28px;
   }
@@ -700,10 +817,26 @@ footer {
   .project-img-container {
     margin-bottom: 30px;
   }
+
   //Projects End
 }
 
 @media screen and (max-width: 400px) {
+  section {
+    &:nth-of-type(1) {
+      margin-bottom: 250px;
+    }
+  }
+
+  //Header Start
+  .name {
+    span {
+      font-size: 26px;
+      letter-spacing: 1px;
+    }
+  }
+  //Header End
+
   //Skills Start
   .skill-group-information {
     margin-left: 12%;
@@ -715,4 +848,15 @@ footer {
     }
   }
   //Skills End
+
+  //Project Start
+  .sort-algo-project-name {
+    font-size: 14px !important;
+  }
+
+  .project-graphic-right {
+    width: 20%;
+    height: 10%;
+  }
+  //Project End
 }
