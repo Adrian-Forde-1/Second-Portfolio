@@ -501,6 +501,33 @@ section:nth-last-child(1) {
 
 .individual-project-description-links-container p:nth-of-type(1) {
   font-weight: 300;
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+.individual-project-description-links-container p:nth-of-type(1)::-webkit-scrollbar {
+  width: 5px;
+  background: #181818;
+}
+
+.individual-project-description-links-container p:nth-of-type(1)::-webkit-scrollbar-thumb {
+  background: #f15f79;
+  border-radius: 20px;
+}
+
+.individual-project-description-links-container p .account {
+  color: white;
+}
+
+.individual-project-description-links-container span {
+  display: block;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #f15f79;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .individual-project-warning {
