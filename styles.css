@@ -97,7 +97,7 @@ section:nth-last-child(1) {
   width: 100%;
   height: 100vh;
   position: fixed;
-  background: #202124;
+  background: #f15f79;
   top: 0;
   left: 0;
   pointer-events: none;
@@ -112,10 +112,43 @@ section:nth-last-child(1) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   z-index: 2000;
+}
+
+.transition-2 {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 2000;
+  display: none;
+}
+
+.transition-2 ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.transition-2 ul li {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: #f15f79;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
 }
 
 .page-name {
@@ -134,11 +167,16 @@ section:nth-last-child(1) {
 }
 
 .page-name svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 80%;
   display: none;
 }
 
-.page-name #cellphone-repair-website-name path {
+.page-name svg path {
   stroke-width: 2px;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
