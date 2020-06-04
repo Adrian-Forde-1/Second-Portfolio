@@ -9,11 +9,12 @@ const nameSpans = document.querySelectorAll('.name span');
 var textHighlightColor;
 
 //Adding onclick to hamburger to operate navbar
-// if (window.location.pathname === '/') {
-//   document.querySelector('.hamburger').addEventListener('click', () => {
-//     document.querySelector('.nav-wrapper ul').classList.toggle('nav-open');
-//   });
-// }
+
+if (document.querySelector('.hamburger')) {
+  document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.nav-wrapper ul').classList.toggle('nav-open');
+  });
+}
 
 //Decide which highlight color to use when page loads
 window.onload = () => {
@@ -81,10 +82,4 @@ window.addEventListener('scroll', (e) => {
 
     headerGraphics[index].style.transform = `translate3d(0px, ${pos}px, 0px)`;
   }
-
-  // nameSpans.forEach((span) => {
-  //   var spanRate = scrolled * getRandomArbitrary(0.5, 2);
-  //   console.log(spanRate);
-  //   span.style.transform = `translate3d(0px, ${rate}px, 0px)`;
-  // });
 });
