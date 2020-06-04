@@ -21,6 +21,7 @@
     <title>Project | Bug Tracker</title>
   </head>
   <body class="relative">
+    <div class="transition"></div>
     <nav class="z-depth-0">
       <div class="container">
         <div class="nav-wrapper">
@@ -31,70 +32,84 @@
         </div>
       </div>
     </nav>
-    <div class="container individual-project">
-      <div class="row">
-        <div class="col s12 individual-project-img-container">
-          <img
-            src="imgs/Bug Tracker Website Picture.PNG"
-            alt="Bug Tracker Project"
-          />
-        </div>
-      </div>
-      <div class="individual-project-information">
-        <h3>Bug Tracker</h3>
-        <div class="row grid-auto-rows">
-          <div class="col s12 m4 individual-project-made-with">
-            <h5>Made With</h5>
-            <ul>
-              <li>HTML 5</li>
-              <li>CSS 3</li>
-              <li>Bootsrap</li>
-              <li>React Js</li>
-              <li>Redux</li>
-              <li>Javascript</li>
-              <li>Node Js</li>
-              <li>Express Js</li>
-              <li>MongoDB</li>
-            </ul>
+    <div data-barba="wrapper">
+      <main data-barba="container" data-barba-namespace="project">
+        <div class="container individual-project">
+          <div class="row">
+            <div class="col s12 individual-project-img-container">
+              <img
+                src="imgs/Bug Tracker Website Picture.PNG"
+                alt="Bug Tracker Project"
+              />
+            </div>
           </div>
-          <div
-            class="col s12 m8 individual-project-description-links-container"
-          >
-            <h5>Description</h5>
-            <div>
-              <p>
-                Aimed toward developers, this website helps with managing your
-                bugs during development and production. It also features teams
-                where you can work alongside a group of individuals for a faster
-                work flow.
-              </p>
-              <p class="individual-project-warning">
-                This project is hosted on heroku so it will take a few seconds
-                to load. Sorry in advance
-              </p>
-              <div class="individual-project-links">
-                <a
-                  target="_blank"
-                  href="https://github.com/DawnOfHopee/bug_tracker_website"
-                  >Github</a
-                >
-                <a target="_blank" href="https://af-bug-tracker.herokuapp.com/"
-                  >Live</a
-                >
+          <div class="individual-project-information">
+            <h3>Bug Tracker</h3>
+            <div class="row grid-auto-rows">
+              <div class="col s12 m4 individual-project-made-with">
+                <h5>Made With</h5>
+                <ul>
+                  <li>HTML 5</li>
+                  <li>CSS 3</li>
+                  <li>Bootsrap</li>
+                  <li>React Js</li>
+                  <li>Redux</li>
+                  <li>Javascript</li>
+                  <li>Node Js</li>
+                  <li>Express Js</li>
+                  <li>MongoDB</li>
+                </ul>
+              </div>
+              <div
+                class="col s12 m8 individual-project-description-links-container"
+              >
+                <h5>Description</h5>
+                <div>
+                  <p>
+                    Aimed toward developers, this website helps with managing
+                    your bugs during development and production. It also
+                    features teams where you can work alongside a group of
+                    individuals for a faster work flow.
+                  </p>
+                  <p class="individual-project-warning">
+                    This project is hosted on heroku so it will take a few
+                    seconds to load. Sorry in advance
+                  </p>
+                  <div class="individual-project-links">
+                    <a
+                      target="_blank"
+                      href="https://github.com/DawnOfHopee/bug_tracker_website"
+                      >Github</a
+                    >
+                    <a
+                      target="_blank"
+                      href="https://af-bug-tracker.herokuapp.com/"
+                      >Live</a
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <div class="project-graphic-left"></div>
+        <div class="project-graphic-mid"></div>
+        <div class="project-graphic-right"></div>
+      </main>
     </div>
-    <div class="project-graphic-left"></div>
-    <div class="project-graphic-mid"></div>
-    <div class="project-graphic-right"></div>
 
     <!-- FontAwesome -->
     <script
       src="https://kit.fontawesome.com/b13fec7300.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
+
+    <!-- Barba Js -->
+    <script src="https://unpkg.com/@barba/core"></script>
+
+    <script src="JS/script.js"></script>
   </body>
 </html>
