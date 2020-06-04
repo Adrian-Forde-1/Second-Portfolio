@@ -95,6 +95,52 @@ section {
     // z-index: 1;
   }
 }
+.wrapper {
+  padding-bottom: 50px;
+}
+
+.transition {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: #202124;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  transform: scaleX(0);
+  z-index: 2000;
+}
+
+.page-name {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 80%;
+    display: none;
+  }
+  //SVG PATHS START
+
+  #cellphone-repair-website-name {
+    path {
+      stroke-width: 2px;
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      transition: stroke-dashoffset 300ms ease-out;
+    }
+  }
+
+  //SVG PATHS END
+}
 
 //Global End
 
@@ -293,7 +339,7 @@ section {
   width: 100%;
   height: 100%;
   position: absolute;
-  right: -50%;
+  right: -10%;
   background: #181818;
   transform: skewX(-15deg);
 }
@@ -891,4 +937,13 @@ footer {
     height: 10%;
   }
   //Project End
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
