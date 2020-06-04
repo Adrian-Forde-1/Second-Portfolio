@@ -27,13 +27,15 @@ body {
 }
 
 nav {
+  width: 100%;
+  height: 10vh;
   background: transparent;
   position: relative;
   z-index: 1000;
 
   ul {
     position: absolute;
-    top: 50%;
+    top: 0%;
     right: 0px;
   }
 }
@@ -64,6 +66,12 @@ section {
 }
 
 //Global Start
+
+nav {
+  .container {
+    height: 100%;
+  }
+}
 
 .section-name {
   letter-spacing: 1.8px;
@@ -192,13 +200,6 @@ section {
 
 //Header Start
 
-.nav-wrapper {
-  i {
-    height: 64px;
-    line-height: 64px;
-  }
-}
-
 .name {
   white-space: nowrap;
   span {
@@ -215,7 +216,23 @@ section {
   font-size: 22px !important;
 }
 
+.no-list-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .brand-logo {
+    display: block;
+    margin: auto;
+  }
+}
+
 .nav-wrapper {
+  width: 100%;
+  height: 100%;
+  i {
+    height: 64px;
+    line-height: 64px;
+  }
   li {
     cursor: pointer;
     z-index: 100;

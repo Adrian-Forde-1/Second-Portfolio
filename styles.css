@@ -23,6 +23,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 nav {
+  width: 100%;
+  height: 10vh;
   background: transparent;
   position: relative;
   z-index: 1000;
@@ -30,7 +32,7 @@ nav {
 
 nav ul {
   position: absolute;
-  top: 50%;
+  top: 0%;
   right: 0px;
 }
 
@@ -56,6 +58,10 @@ section {
 
 section:nth-last-child(1) {
   margin-bottom: 0;
+}
+
+nav .container {
+  height: 100%;
 }
 
 .section-name {
@@ -204,11 +210,6 @@ section:nth-last-child(1) {
   color: #f15f79;
 }
 
-.nav-wrapper i {
-  height: 64px;
-  line-height: 64px;
-}
-
 .name {
   white-space: nowrap;
 }
@@ -225,6 +226,33 @@ section:nth-last-child(1) {
 .brand-logo {
   color: white !important;
   font-size: 22px !important;
+}
+
+.no-list-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.no-list-links .brand-logo {
+  display: block;
+  margin: auto;
+}
+
+.nav-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-wrapper i {
+  height: 64px;
+  line-height: 64px;
 }
 
 .nav-wrapper li {
