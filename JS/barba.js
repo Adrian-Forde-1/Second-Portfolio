@@ -1,7 +1,9 @@
 barba.hooks.afterLeave(() => {
-  document.querySelector('body').style.scrollBehavior = 'initial';
+  // document.querySelector('body').style.scrollBehavior = 'initial';
+  gsap.set('body', { scrollBehavior: 'initial' });
   window.scrollTo(0, 0);
-  document.querySelector('body').style.scrollBehavior = 'smooth';
+  gsap.set('body', { scrollBehavior: 'smooth' });
+  // document.querySelector('body').style.scrollBehavior = 'smooth';
 });
 
 function projectTransition(path) {
