@@ -85,6 +85,8 @@ nav {
 .section-name-decoration {
   height: 2px;
   width: 400px;
+  transform-origin: center;
+  transform: scaleX(0);
   margin: 0 auto 100px auto;
   background: $blue-color;
   border-radius: 50px;
@@ -140,9 +142,16 @@ nav {
 
     li {
       flex-grow: 1;
-      background: $peach-color;
+      background: $blue-color;
       transform-origin: left;
       transform: scaleX(0);
+
+      // &:nth-of-type(2) {
+      //   background: $blue-color !important;
+      // }
+      // &:nth-of-type(4) {
+      //   background: $blue-color !important;
+      // }
     }
   }
 }
@@ -379,15 +388,14 @@ nav {
   width: 100%;
   height: 100%;
   position: absolute;
-  right: -10%;
+  right: 0%;
   background: #181818;
-  transform: skewX(-15deg);
 }
 
 .skill-group-information {
-  transform: skew(15deg);
   margin-left: 20%;
   margin-top: 50px;
+  transform: skewX(0deg);
 
   ul {
     li {
