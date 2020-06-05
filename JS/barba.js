@@ -91,8 +91,7 @@ function projectPageEnter() {
   var tl = gsap.timeline();
 }
 
-function homeTransition(path) {
-  console.log('Home transition called');
+function homeTransition() {
   var tl = gsap.timeline();
 
   tl.set('.transition-2', { display: 'block' });
