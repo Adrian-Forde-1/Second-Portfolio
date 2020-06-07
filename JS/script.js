@@ -1,9 +1,5 @@
-if (window.location.pathname !== '/') {
-  // document.querySelector('');
-}
-
 //Get all span letters
-const nameSpans = document.querySelectorAll('.name span');
+var nameSpans = document.querySelectorAll('.name span');
 
 //Set highlight color for span letters
 var textHighlightColor;
@@ -18,7 +14,7 @@ if (document.querySelector('.hamburger')) {
 
 //Decide which highlight color to use when page loads
 window.onload = () => {
-  const vw = Math.max(
+  var vw = Math.max(
     document.documentElement.clientWidth,
     window.innerWidth || 0
   );
@@ -32,7 +28,7 @@ window.onload = () => {
 
 //Decide which highlight color to use when page resizes
 window.addEventListener('resize', () => {
-  const vw = Math.max(
+  var vw = Math.max(
     document.documentElement.clientWidth,
     window.innerWidth || 0
   );
@@ -72,7 +68,7 @@ setInterval(() => {
 
 //Paralax Effect
 window.addEventListener('scroll', (e) => {
-  const headerGraphics = document.querySelectorAll('#scroll');
+  var headerGraphics = document.querySelectorAll('#scroll');
 
   var index = 0;
   var length = headerGraphics.length;
