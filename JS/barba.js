@@ -3,7 +3,7 @@ barba.hooks.leave(() => {
     pointerEvents: 'none',
   });
 });
-barba.hooks.leave(() => {
+barba.hooks.afterEnter(() => {
   gsap.set(document.body, {
     pointerEvents: 'all',
   });
