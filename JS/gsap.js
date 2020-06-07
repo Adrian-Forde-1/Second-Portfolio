@@ -92,7 +92,7 @@ document.querySelector('.about-me').addEventListener('mouseleave', () => {
 gsap.to('#frontend-projects #project', {
   scrollTrigger: {
     trigger: '#frontend-projects',
-    start: 'top center',
+    start: 'top bottom',
     toggleActions: 'play restart resume reverse',
   },
   duration: 0.4,
@@ -104,7 +104,7 @@ gsap.to('#frontend-projects #project', {
 gsap.to('#fullstack-projects #project', {
   scrollTrigger: {
     trigger: '#fullstack-projects',
-    start: 'top center',
+    start: 'top bottom',
     toggleActions: 'play restart resume reverse',
   },
   duration: 0.4,
@@ -112,3 +112,52 @@ gsap.to('#fullstack-projects #project', {
   opacity: 1,
   stagger: 0.2,
 });
+
+//Set highlight color for span letters
+var textHighlightColor = '#f15f79';
+
+//Decide which highlight color to use when page loads
+window.onload = () => {
+  var vw = Math.max(
+    document.documentElement.clientWidth,
+    window.innerWidth || 0
+  );
+
+  if (vw <= 567) {
+    textHighlightColor = '#64ffda';
+  } else {
+    textHighlightColor = '#f15f79';
+  }
+};
+
+document.querySelectorAll('.name span').forEach((span, index) => {
+  const tl = gsap.timeline();
+  tl.to(span, {
+    duration: 0.5,
+    delay: () => {
+      return 0.5 * index;
+    },
+    color: textHighlightColor,
+  });
+
+  tl.to(span, {
+    clearProps: 'all',
+  });
+});
+
+setInterval(() => {
+  document.querySelectorAll('.name span').forEach((span, index) => {
+    const tl = gsap.timeline();
+    tl.to(span, {
+      duration: 0.5,
+      delay: () => {
+        return 0.5 * index;
+      },
+      color: textHighlightColor,
+    });
+
+    tl.to(span, {
+      clearProps: 'all',
+    });
+  });
+}, document.querySelectorAll('.name span').length * 500);
