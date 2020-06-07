@@ -1,3 +1,14 @@
+barba.hooks.leave(() => {
+  gsap.set(document.body, {
+    pointerEvents: 'none',
+  });
+});
+barba.hooks.leave(() => {
+  gsap.set(document.body, {
+    pointerEvents: 'all',
+  });
+});
+
 barba.hooks.afterLeave(() => {
   // document.querySelector('body').style.scrollBehavior = 'initial';
   gsap.set('body', { scrollBehavior: 'initial' });
@@ -17,13 +28,14 @@ function projectTransition(path) {
   if (path === 'cellphonerepair') {
     pageName = document.querySelector('#cellphone-repair-website-name');
 
-    pageNamePath = document.querySelectorAll(
-      '#cellphone-repair-website-name path'
-    );
-
-    pageNamePath.forEach((path) => {
-      path.style.animation = `dash 1s ease-out 200ms`;
-    });
+    pageNamePath = document
+      .querySelectorAll('#cellphone-repair-website-name path')
+      .forEach((path) => {
+        gsap.to(path, {
+          duration: 1,
+          strokeDashoffset: 0,
+        });
+      });
   } else if (path === 'restaurantwebsite') {
     pageName = document.querySelector('#restaurant-website-name');
 
@@ -129,6 +141,7 @@ const delay = (n) => {
 
 barba.init({
   sync: true,
+  preventRunning: true,
   views: [
     {
       namespace: 'home',
