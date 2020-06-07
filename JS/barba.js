@@ -129,27 +129,75 @@ const delay = (n) => {
 
 barba.init({
   sync: true,
+  views: [
+    {
+      namespace: 'home',
+      afterEnter() {
+        document.querySelectorAll('script').forEach((script, index) => {
+          // if (index === 6) {
+          //   var old_src = 'JS/barba.js';
+          //   document.body.removeChild(script);
+          //   const newScript = document.createElement('script');
+          //   newScript.type = 'text/javascript';
+          //   newScript.src = old_src;
+          //   console.log(newScript);
+          //   document.body.appendChild(newScript);
+          // }
+          if (index === 7) {
+            var old_src = 'JS/script.js';
+            document.body.removeChild(script);
+            const newScript = document.createElement('script');
+            newScript.type = 'text/javascript';
+            newScript.src = old_src;
+            document.body.appendChild(newScript);
+          }
+          if (index === 8) {
+            var old_src = 'JS/gsap.js';
+            document.body.removeChild(script);
+            const newScript = document.createElement('script');
+            newScript.type = 'text/javascript';
+            newScript.src = old_src;
+            document.body.appendChild(newScript);
+          }
+        });
+      },
+    },
+  ],
   transitions: [
     {
+      name: 'Home To Projects',
+      from: {
+        namespace: ['home'],
+      },
       async leave(data) {
         const done = this.async();
-        if (data.next.url.path.split('/')[1] !== 'index.html') {
-          projectTransition(data.next.url.path);
-          await delay(1500);
-          done();
-        } else {
-          homeTransition();
-          await delay(1500);
-          done();
-        }
+        projectTransition(data.next.url.path);
+        await delay(1500);
+        done();
       },
-
-      async enter(data) {
-        if (data.next.url.path.split('/')[1] !== 'index.html') {
-          projectPageEnter(data.next.url.path);
-        } else {
-          homePageEnter();
-        }
+      async after(data) {
+        const done = this.async();
+        projectPageEnter(data.next.url.path);
+        await delay(1500);
+        done();
+      },
+    },
+    {
+      name: 'Projects To Home',
+      from: {
+        namespace: ['project'],
+      },
+      async leave(data) {
+        const done = this.async();
+        homeTransition();
+        await delay(1500);
+        done();
+      },
+      async after(data) {
+        const done = this.async();
+        homePageEnter();
+        await delay(1500);
+        done();
       },
     },
   ],
