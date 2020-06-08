@@ -811,6 +811,12 @@ footer {
   }
   //Header End
 
+  //Section Start
+  .svg-section-name {
+    width: 30%;
+  }
+  //Section End
+
   //SKills Start
   .skills-group {
     height: 250px;
@@ -919,6 +925,12 @@ footer {
   }
   //Header End
 
+  //Section Start
+  .svg-section-name {
+    width: 40%;
+  }
+  //Section End
+
   //Skills Start
   .skills-group {
     height: 200px;
@@ -951,9 +963,19 @@ footer {
     height: 15%;
   }
 
+  .project-information-section {
+    padding: 20px 0px;
+  }
+
   .individual-project-information {
     h3 {
       font-size: 28px;
+    }
+  }
+
+  .individual-project-img-container {
+    img {
+      width: 80%;
     }
   }
 
@@ -1012,8 +1034,15 @@ footer {
   //Skills End
 
   //Project Start
+
+  .individual-project-information {
+    h3 {
+      font-size: 10px;
+    }
+  }
+
   .sort-algo-project-name {
-    font-size: 14px !important;
+    font-size: 10px !important;
   }
 
   .project-graphic-right {
