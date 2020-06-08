@@ -437,6 +437,11 @@ nav {
 //Skills End
 
 //Project Start
+.project-information-section {
+  background: #1e1e1e;
+  padding: 50px 0px;
+  margin-bottom: 0px !important;
+}
 .project-graphic-left {
   width: 50%;
   height: 50%;
@@ -539,15 +544,17 @@ nav {
 }
 
 .individual-project {
-  padding: 50px 0px;
+  height: 100%;
+  padding: 50px 0px 0px 0px;
 }
 
 .individual-project-img-container {
   display: block;
   margin: auto;
+  transform: translateY(-50%);
+  opacity: 0;
   img {
-    width: 80%;
-    height: 100%;
+    width: 60%;
     object-fit: contain;
     display: block;
     margin: auto;
@@ -558,9 +565,13 @@ nav {
   h3 {
     white-space: nowrap;
     text-align: center;
-    color: $peach-color;
+    color: #fff;
     font-size: 32px;
     margin: 50px;
+    span {
+      top: -100;
+      opacity: 0;
+    }
   }
 }
 
@@ -588,6 +599,7 @@ nav {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  opacity: 0;
   h5 {
     color: $peach-color;
   }
@@ -831,6 +843,10 @@ footer {
 
   .sort-algo-project-name {
     font-size: 26px !important;
+    letter-spacing: normal;
+    span {
+      position: relative;
+    }
   }
 
   .individual-project-made-with {
@@ -950,6 +966,10 @@ footer {
   .individual-project-description-links-container {
     h5 {
       font-size: 20px;
+    }
+
+    p {
+      text-align: center;
     }
   }
   .project-type-title {

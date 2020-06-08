@@ -466,6 +466,12 @@ nav .container {
   background: linear-gradient(90deg, #b24592, #f15f79);
 }
 
+.project-information-section {
+  background: #1e1e1e;
+  padding: 50px 0px;
+  margin-bottom: 0px !important;
+}
+
 .project-graphic-left {
   width: 50%;
   height: 50%;
@@ -568,17 +574,20 @@ nav .container {
 }
 
 .individual-project {
-  padding: 50px 0px;
+  height: 100%;
+  padding: 50px 0px 0px 0px;
 }
 
 .individual-project-img-container {
   display: block;
   margin: auto;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
 }
 
 .individual-project-img-container img {
-  width: 80%;
-  height: 100%;
+  width: 60%;
   -o-object-fit: contain;
      object-fit: contain;
   display: block;
@@ -588,9 +597,14 @@ nav .container {
 .individual-project-information h3 {
   white-space: nowrap;
   text-align: center;
-  color: #f15f79;
+  color: #fff;
   font-size: 32px;
   margin: 50px;
+}
+
+.individual-project-information h3 span {
+  top: -100;
+  opacity: 0;
 }
 
 .individual-project-made-with h5 {
@@ -635,6 +649,7 @@ nav .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 0;
 }
 
 .individual-project-description-links-container h5 {
@@ -874,6 +889,10 @@ footer h3 {
   }
   .sort-algo-project-name {
     font-size: 26px !important;
+    letter-spacing: normal;
+  }
+  .sort-algo-project-name span {
+    position: relative;
   }
   .individual-project-made-with ul li {
     font-size: 12px;
@@ -950,6 +969,9 @@ footer h3 {
   }
   .individual-project-description-links-container h5 {
     font-size: 20px;
+  }
+  .individual-project-description-links-container p {
+    text-align: center;
   }
   .project-type-title {
     font-size: 28px;
