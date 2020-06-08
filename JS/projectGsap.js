@@ -3,11 +3,13 @@ var projectName = document.querySelectorAll(
   '.individual-project-information h3 span'
 );
 
-tl.to('.individual-project-img-container', {
+console.log(document.querySelector('.individual-project-img-container'));
+
+tl.from('.individual-project-img-container', {
   duration: 1.25,
   delay: 0.2,
-  yPercent: 0,
-  opacity: 1,
+  yPercent: '-50',
+  opacity: 0,
   ease: 'power1.inOut',
 });
 tl.to(projectName, {

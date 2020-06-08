@@ -555,8 +555,8 @@ nav {
 .individual-project-img-container {
   display: block;
   margin: auto;
-  transform: translateY(-50%);
-  opacity: 0;
+  transform: translateY(0%);
+  opacity: 1;
   img {
     width: 60%;
     object-fit: contain;

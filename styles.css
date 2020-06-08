@@ -585,9 +585,9 @@ nav .container {
 .individual-project-img-container {
   display: block;
   margin: auto;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  opacity: 0;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  opacity: 1;
 }
 
 .individual-project-img-container img {
