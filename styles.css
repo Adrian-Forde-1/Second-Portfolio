@@ -890,13 +890,6 @@ footer h3 {
     width: 15%;
     height: 12%;
   }
-  .sort-algo-project-name {
-    font-size: 26px !important;
-    letter-spacing: normal;
-  }
-  .sort-algo-project-name span {
-    position: relative;
-  }
   .individual-project-made-with ul li {
     font-size: 12px;
   }
@@ -960,9 +953,6 @@ footer h3 {
   .skill-img {
     height: 50%;
   }
-  .sort-algo-project-name {
-    font-size: 20px !important;
-  }
   .project-graphic-right {
     width: 25%;
     height: 15%;
@@ -1009,9 +999,6 @@ footer h3 {
   }
   .individual-project-information h3 {
     font-size: 10px;
-  }
-  .sort-algo-project-name {
-    font-size: 10px !important;
   }
   .project-graphic-right {
     width: 20%;
