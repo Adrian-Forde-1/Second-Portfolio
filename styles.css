@@ -6,6 +6,10 @@
   scroll-behavior: smooth;
 }
 
+html {
+  max-height: 100%;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background: #202124;
@@ -599,10 +603,19 @@ nav .container {
   text-align: center;
   color: #fff;
   margin: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .individual-project-information h3 span {
-  font-size: 32px;
+  font-size: 3vw;
   top: -100;
   opacity: 0;
 }
@@ -961,7 +974,7 @@ footer h3 {
     padding: 20px 0px;
   }
   .individual-project-information h3 span {
-    font-size: 28px;
+    font-size: 4vw;
   }
   .individual-project-img-container img {
     width: 80%;
@@ -997,8 +1010,19 @@ footer h3 {
   .skill-group-information ul li {
     font-size: 10px;
   }
+  .individual-project-information h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .individual-project-information h3 span {
-    font-size: 10px;
+    font-size: 5vw;
   }
   .project-graphic-right {
     width: 20%;
