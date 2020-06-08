@@ -598,11 +598,11 @@ nav .container {
   white-space: nowrap;
   text-align: center;
   color: #fff;
-  font-size: 32px;
   margin: 50px;
 }
 
 .individual-project-information h3 span {
+  font-size: 32px;
   top: -100;
   opacity: 0;
 }
@@ -960,7 +960,7 @@ footer h3 {
   .project-information-section {
     padding: 20px 0px;
   }
-  .individual-project-information h3 {
+  .individual-project-information h3 span {
     font-size: 28px;
   }
   .individual-project-img-container img {
@@ -997,7 +997,7 @@ footer h3 {
   .skill-group-information ul li {
     font-size: 10px;
   }
-  .individual-project-information h3 {
+  .individual-project-information h3 span {
     font-size: 10px;
   }
   .project-graphic-right {
