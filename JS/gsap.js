@@ -1,5 +1,3 @@
-console.log(window.location.pathname);
-
 gsap.registerPlugin(ScrollTrigger);
 
 //Animate the stroke of the section name
@@ -50,6 +48,7 @@ document.querySelectorAll('.skills-content').forEach((skillContent) => {
     right: '-50%',
     skewX: '-15',
     skewType: 'simple',
+    z: 0.1,
     duration: 1,
     ease: 'power4.out',
   });
@@ -63,6 +62,7 @@ document.querySelectorAll('.skills-content').forEach((skillContent) => {
       toggleActions: 'play restart resume reverse',
     },
     skewX: 15,
+    z: 0.1,
     duration: 0.3,
   });
 });
@@ -75,6 +75,7 @@ gsap.from('.about-me-graphic-right, .about-me-graphic-left', {
   },
   scale: 0,
   duration: 1,
+  z: 0.1,
   ease: 'back',
 });
 
@@ -82,12 +83,14 @@ document.querySelector('.about-me').addEventListener('mouseenter', () => {
   gsap.to('.about-me-graphic-left, .about-me-graphic-right', {
     scale: 1.2,
     duration: 0.4,
+    z: 0.1,
   });
 });
 document.querySelector('.about-me').addEventListener('mouseleave', () => {
   gsap.to('.about-me-graphic-left, .about-me-graphic-right', {
     scale: 1,
     duration: 0.4,
+    z: 0.1,
   });
 });
 
@@ -100,6 +103,7 @@ gsap.to('#frontend-projects #project', {
   duration: 0.4,
   scale: 1,
   opacity: 1,
+  z: 0.1,
   stagger: 0.2,
 });
 
@@ -112,6 +116,7 @@ gsap.to('#fullstack-projects #project', {
   duration: 0.4,
   scale: 1,
   opacity: 1,
+  z: 0.1,
   stagger: 0.2,
 });
 
