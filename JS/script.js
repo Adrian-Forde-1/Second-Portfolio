@@ -1,3 +1,20 @@
+//Set highlight color for span letters
+var textHighlightColor = '#f15f79';
+
+//Decide which highlight color to use when page loads
+window.onload = () => {
+  var vw = Math.max(
+    document.documentElement.clientWidth,
+    window.innerWidth || 0
+  );
+
+  if (vw <= 567) {
+    textHighlightColor = '#64ffda';
+  } else {
+    textHighlightColor = '#f15f79';
+  }
+};
+
 //Adding onclick to hamburger to operate navbar
 
 if (document.querySelector('.hamburger')) {
