@@ -8,7 +8,7 @@ console.log(document.querySelector('.individual-project-img-container'));
 tl.from('.individual-project-img-container', {
   duration: 1.25,
   delay: 0.2,
-  yPercent: '50',
+  yPercent: '-50',
   opacity: 0,
   ease: 'power1.inOut',
 })
