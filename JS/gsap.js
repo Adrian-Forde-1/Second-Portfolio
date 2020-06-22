@@ -1,5 +1,72 @@
 gsap.registerPlugin(ScrollTrigger);
 
+window.onload = () => {};
+
+window.addEventListener('scroll', () => {
+  var homeNavbar = document.querySelector('.home-navbar');
+  homeNavbar.classList.toggle('sticky', window.scrollY > 0);
+});
+
+if (sessionStorage.getItem('loadingScreen') !== 'played') {
+  const tl1 = gsap.timeline({
+    onComplete: () => {
+      document.body.style.overflowY = 'auto';
+      document.querySelector('.home-navbar').style.zIndex = '2000';
+    },
+  });
+
+  document.body.style.overflowY = 'hidden';
+
+  tl1
+    .to('.logo svg path', {
+      opacity: 1,
+      stagger: 0.2,
+    })
+    .to('.logo svg', {
+      duration: 2,
+      scale: 0.8,
+    })
+    .to('.logo', {
+      duration: 2,
+      top: '45%',
+    })
+    .to(
+      '.loading-screen',
+      {
+        duration: 3,
+        top: '-110%',
+        ease: 'expo.inOut',
+      },
+      '-=2.5'
+    )
+    .to(
+      '.logo .information',
+      {
+        duration: 2,
+        y: 0,
+        opacity: 1,
+      },
+      '-=1.5'
+    )
+    .to(
+      '.cta',
+      {
+        duration: 2,
+        opacity: 1,
+      },
+      '-=1.5'
+    );
+
+  sessionStorage.setItem('loadingScreen', 'played');
+} else {
+  gsap.set('.logo svg path', { opacity: 1 });
+  gsap.set('.logo svg', { scale: 0.8 });
+  gsap.set('.logo', { top: '45%' });
+  gsap.set('.logo .information', { y: 0, opacity: 1 });
+  gsap.set('.loading-screen', { top: '-110%' });
+  gsap.set('.cta', { opacity: 1 });
+}
+
 //Animate the stroke of the section name
 //Add the fill
 //Animate the decoration's scale
