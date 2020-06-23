@@ -65,6 +65,7 @@ if (sessionStorage.getItem('loadingScreen') !== 'played') {
   gsap.set('.logo .information', { y: 0, opacity: 1 });
   gsap.set('.loading-screen', { top: '-110%' });
   gsap.set('.cta', { opacity: 1 });
+  document.querySelector('.home-navbar').style.zIndex = '2000';
 }
 
 //Animate the stroke of the section name
@@ -91,17 +92,21 @@ document.querySelectorAll('section').forEach((section) => {
     strokeDashoffset: 0,
   });
   //Animate decoration's scale
-  tl.to(sectionName, {
-    duration: 0.3,
-    fill: '#fff',
-  });
+  tl.to(
+    sectionName,
+    {
+      duration: 0.3,
+      fill: '#fff',
+    },
+    '-=0.5'
+  );
   tl.to(
     sectionNameDecoration,
     {
       scaleX: 1,
       duration: 0.4,
     },
-    '-=0.3'
+    '-=0.8'
   );
 });
 
