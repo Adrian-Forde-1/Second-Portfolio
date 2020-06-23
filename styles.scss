@@ -650,6 +650,7 @@ nav {
     justify-content: center;
     align-items: center;
     span {
+      transform: translateY(20px);
       font-size: 3vw;
       top: -100;
       opacity: 0;

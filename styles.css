@@ -693,6 +693,8 @@ nav .container {
 }
 
 .individual-project-information h3 span {
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
   font-size: 3vw;
   top: -100;
   opacity: 0;
