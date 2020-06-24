@@ -20,24 +20,24 @@ if (sessionStorage.getItem('loadingScreen') !== 'played') {
   tl1
     .to('.logo svg path', {
       opacity: 1,
-      stagger: 0.2,
+      stagger: 0.15,
     })
     .to('.logo svg', {
-      duration: 2,
+      duration: 1.5,
       scale: 0.8,
     })
     .to('.logo', {
-      duration: 2,
+      duration: 1.5,
       top: '45%',
     })
     .to(
       '.loading-screen',
       {
-        duration: 3,
+        duration: 2.5,
         top: '-110%',
         ease: 'expo.inOut',
       },
-      '-=2.5'
+      '-=2'
     )
     .to(
       '.logo .information',
@@ -46,7 +46,7 @@ if (sessionStorage.getItem('loadingScreen') !== 'played') {
         y: 0,
         opacity: 1,
       },
-      '-=1.5'
+      '-=2'
     )
     .to(
       '.cta',
