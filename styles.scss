@@ -430,11 +430,16 @@ nav {
 //About Me Start
 
 .about-me {
-  text-align: center;
-  padding: 50px;
-  background: #181818;
-  box-shadow: 2px 2px 5px #181818;
   position: relative;
+  p {
+    text-align: center;
+    box-shadow: 2px 2px 5px #2c2b2b;
+    background: #181818;
+    position: relative;
+    padding: 50px;
+    display: block;
+    z-index: 10;
+  }
 }
 
 .about-me-graphic-left {
@@ -446,7 +451,7 @@ nav {
   background-image: url('./imgs/Dots.svg');
   background-repeat: no-repeat;
   background-size: contain;
-  z-index: -1;
+  z-index: 1;
 }
 
 .about-me-graphic-right {
@@ -458,7 +463,7 @@ nav {
   background-image: url('./imgs/Dots.svg');
   background-repeat: no-repeat;
   background-size: contain;
-  z-index: -1;
+  z-index: 1;
 }
 
 //About Me End
