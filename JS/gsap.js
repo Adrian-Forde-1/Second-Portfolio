@@ -23,7 +23,7 @@ if (sessionStorage.getItem('loadingScreen') !== 'played') {
       stagger: 0.15,
     })
     .to('.logo svg', {
-      duration: 1.5,
+      duration: 1,
       scale: 0.8,
     })
     .to('.logo', {
@@ -33,7 +33,7 @@ if (sessionStorage.getItem('loadingScreen') !== 'played') {
     .to(
       '.loading-screen',
       {
-        duration: 2.5,
+        duration: 3,
         top: '-110%',
         ease: 'expo.inOut',
       },
@@ -46,7 +46,7 @@ if (sessionStorage.getItem('loadingScreen') !== 'played') {
         y: 0,
         opacity: 1,
       },
-      '-=2'
+      '-=1'
     )
     .to(
       '.cta',
@@ -54,7 +54,7 @@ if (sessionStorage.getItem('loadingScreen') !== 'played') {
         duration: 2,
         opacity: 1,
       },
-      '-=1.5'
+      '-=2'
     );
 
   sessionStorage.setItem('loadingScreen', 'played');
