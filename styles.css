@@ -481,7 +481,7 @@ nav .container {
   background-image: url("./imgs/Dots.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  z-index: 1;
+  z-index: -1;
 }
 
 .about-me-graphic-right {
@@ -493,7 +493,7 @@ nav .container {
   background-image: url("./imgs/Dots.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  z-index: 1;
+  z-index: -1;
 }
 
 .skills-group {
