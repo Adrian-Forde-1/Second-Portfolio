@@ -699,8 +699,8 @@ nav .container {
 }
 
 .individual-project-information h3 span {
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
   font-size: 3vw;
   top: -100;
   opacity: 0;
@@ -749,8 +749,8 @@ nav .container {
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
 }
 
 .individual-project-description-links-container h5 {

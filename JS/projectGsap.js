@@ -8,23 +8,27 @@ tl.from('.individual-project-img-container', {
   delay: 0.2,
   yPercent: '-50',
   opacity: 0,
-  ease: 'power1.inOut',
+  ease: 'power1.out',
 })
-  .to(projectName, {
-    y: 0,
-    opacity: 1,
-    duration: 2,
-    ease: 'power3.out',
-  })
+  .to(
+    projectName,
+    {
+      y: 0,
+      opacity: 1,
+      duration: 2,
+      ease: 'power3.out',
+    },
+    '-=0.75'
+  )
   .from(
     '.individual-project-made-with',
     {
       duration: 1.5,
       opacity: 0,
-      y: 20,
+      y: '-20',
       ease: 'power3.out',
     },
-    '-=1.5'
+    '-=1.7'
   );
 tl.to(
   '.individual-project-description-links-container',
@@ -34,5 +38,5 @@ tl.to(
     y: 0,
     ease: 'power3.out',
   },
-  '-=1'
+  '-=1.5'
 );

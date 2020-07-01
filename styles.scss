@@ -655,7 +655,7 @@ nav {
     justify-content: center;
     align-items: center;
     span {
-      transform: translateY(20px);
+      transform: translateY(-50px);
       font-size: 3vw;
       top: -100;
       opacity: 0;
@@ -688,7 +688,7 @@ nav {
   justify-content: flex-end;
   align-items: center;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(-20px);
   h5 {
     color: $peach-color;
   }
