@@ -688,6 +688,7 @@ nav {
   justify-content: flex-end;
   align-items: center;
   opacity: 0;
+  transform: translateY(20px);
   h5 {
     color: $peach-color;
   }

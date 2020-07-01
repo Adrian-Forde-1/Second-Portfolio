@@ -19,16 +19,20 @@ tl.from('.individual-project-img-container', {
   .from(
     '.individual-project-made-with',
     {
-      duration: 0.5,
+      duration: 1.5,
       opacity: 0,
+      y: 20,
+      ease: 'power3.out',
     },
-    '-=1'
+    '-=1.5'
   );
 tl.to(
   '.individual-project-description-links-container',
   {
-    duration: 0.5,
+    duration: 1.5,
     opacity: 1,
+    y: 0,
+    ease: 'power3.out',
   },
-  '-=0.5'
+  '-=1'
 );
