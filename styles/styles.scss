@@ -1,7 +1,5 @@
-$blue-color: #64ffda;
-$green-color: #92fe9d;
-$purple-color: #b24592;
-$peach-color: #f15f79;
+@import 'variables';
+@import '_Project.scss';
 
 * {
   margin: 0px;
@@ -160,13 +158,6 @@ nav {
       background: #202124;
       transform-origin: left;
       transform: scaleX(0);
-
-      // &:nth-of-type(2) {
-      //   background: $blue-color !important;
-      // }
-      // &:nth-of-type(4) {
-      //   background: $blue-color !important;
-      // }
     }
   }
 }
@@ -393,7 +384,7 @@ nav {
 .header-graphic-left {
   width: 25%;
   height: 80%;
-  background-image: url('./imgs/Header_Graphic_Left.svg');
+  background-image: url('../imgs/Header_Graphic_Left.svg');
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -405,7 +396,7 @@ nav {
 .header-graphic-mid {
   width: 20%;
   height: 20%;
-  background-image: url('./imgs/Header_Graphic_Mid.svg');
+  background-image: url('../imgs/Header_Graphic_Mid.svg');
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -415,7 +406,7 @@ nav {
   z-index: -1;
 }
 .header-graphic-right {
-  background-image: url('./imgs/Header_Graphic_Right.svg');
+  background-image: url('../imgs/Header_Graphic_Right.svg');
   background-repeat: no-repeat;
   background-size: contain;
   width: 6%;
@@ -448,7 +439,7 @@ nav {
   position: absolute;
   top: -15%;
   left: -8%;
-  background-image: url('./imgs/Dots.svg');
+  background-image: url('../imgs/Dots.svg');
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
@@ -460,7 +451,7 @@ nav {
   position: absolute;
   bottom: -20%;
   right: -8%;
-  background-image: url('./imgs/Dots.svg');
+  background-image: url('../imgs/Dots.svg');
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
@@ -519,324 +510,6 @@ nav {
   background: linear-gradient(90deg, $purple-color, $peach-color);
 }
 //Skills End
-
-//Project Start
-.project-information-section {
-  background: #1e1e1e;
-  padding: 50px 0px;
-  margin-bottom: 0px !important;
-}
-.project-graphic-left {
-  width: 50%;
-  height: 50%;
-  background-image: url('./imgs/Project_Graphic_Left.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  opacity: 0.6;
-  top: 0%;
-  left: -5%;
-  // transform: translateY(-50%);
-  z-index: -1;
-}
-.project-graphic-mid {
-  width: 35%;
-  height: 35%;
-  background-image: url('./imgs/Project_Graphic_Mid.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.8;
-  position: absolute;
-  top: 35%;
-  left: 65%;
-  // transform: translateY(-50%);
-  z-index: -1;
-}
-.project-graphic-right {
-  width: 15%;
-  height: 20%;
-  background-image: url('./imgs/Project_Graphic_Right.svg');
-  background-size: contain;
-  opacity: 0.5;
-  background-repeat: no-repeat;
-  position: absolute;
-  bottom: -10%;
-  right: -5%;
-  z-index: -1;
-}
-
-.project {
-  height: auto;
-  margin-bottom: 75px;
-}
-
-#project {
-  transform: scale(0);
-  opacity: 1;
-}
-
-.project-type-title {
-  text-align: center;
-  font-size: 32px;
-  color: $peach-color;
-  font-weight: 600;
-  margin-bottom: 100px;
-}
-
-.project-img-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    margin: auto;
-    transition: all 300ms ease-in-out;
-    z-index: 0;
-  }
-
-  a {
-    div {
-      &#clothing-website,
-      &#restaurant-website,
-      &.sort-algo-viz,
-      &#bug-tracker-website,
-      &#cellphone-repair-website {
-        &::after {
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 1.2vw;
-          opacity: 0;
-          color: white;
-          transform: translateY(-20px);
-          transition: all 300ms ease-in-out;
-          z-index: 10;
-        }
-      }
-
-      &#clothing-website {
-        &::after {
-          content: 'Clothing Website';
-        }
-      }
-      &#restaurant-website {
-        &::after {
-          content: 'Restaurant Website';
-        }
-      }
-      &.sort-algo-viz {
-        &::after {
-          content: 'Sorting Algorithm Visualizer';
-        }
-      }
-      &#bug-tracker-website {
-        &::after {
-          content: 'Bug Tracker';
-        }
-      }
-      &#cellphone-repair-website {
-        &::after {
-          content: 'Cellphone Repair Website';
-        }
-      }
-    }
-  }
-
-  &:hover {
-    img {
-      filter: brightness(50%);
-    }
-
-    a {
-      div {
-        &#clothing-website,
-        &#restaurant-website,
-        &.sort-algo-viz,
-        &#bug-tracker-website,
-        &#cellphone-repair-website {
-          &::after {
-            opacity: 1;
-            transform: translateY(0px);
-          }
-        }
-      }
-    }
-  }
-}
-
-.project-info {
-  height: auto;
-  h3 {
-    text-align: center;
-    font-size: 28px;
-    color: $purple-color;
-  }
-
-  p {
-    text-align: center;
-    font-weight: 400;
-    font-size: 14px;
-  }
-
-  a {
-    text-decoration: none;
-    display: block;
-    margin: 20px auto 0px auto;
-    width: fit-content;
-    padding: 8px 15px;
-    background: linear-gradient(
-      90deg,
-      $purple-color,
-      $peach-color,
-      $purple-color
-    );
-    color: white;
-    font-weight: 500;
-  }
-}
-
-.individual-project {
-  height: 100%;
-  padding: 50px 0px 0px 0px;
-}
-
-.individual-project-img-container {
-  display: block;
-  margin: auto;
-  transform: translateY(0%);
-  opacity: 1;
-  img {
-    width: 60%;
-    object-fit: contain;
-    display: block;
-    margin: auto;
-  }
-}
-
-.individual-project-information {
-  h3 {
-    white-space: nowrap;
-    text-align: center;
-    color: #fff;
-    margin: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    span {
-      transform: translateY(-50px);
-      font-size: 3vw;
-      top: -100;
-      opacity: 0;
-    }
-  }
-}
-
-.individual-project-made-with {
-  h5 {
-    text-align: center;
-    color: $peach-color;
-  }
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    li {
-      list-style: none;
-      text-align: center;
-      font-weight: 300;
-    }
-  }
-}
-
-.individual-project-description-links-container {
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  opacity: 0;
-  transform: translateY(-20px);
-  h5 {
-    color: $peach-color;
-  }
-  p {
-    &:nth-of-type(1) {
-      font-weight: 300;
-      max-height: 150px;
-      overflow-y: scroll;
-
-      &::-webkit-scrollbar {
-        width: 5px;
-        background: #181818;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background: $peach-color;
-        border-radius: 20px;
-      }
-    }
-
-    .account {
-      color: white;
-    }
-  }
-
-  span {
-    display: block;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    color: $peach-color;
-    text-align: center;
-    margin-top: 20px;
-  }
-}
-
-.individual-project-warning {
-  color: red;
-  font-size: 12px;
-  margin-top: 20px;
-  text-align: center;
-}
-.individual-project-links {
-  width: fit-content;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  a {
-    padding: 8px 25px;
-    border: 2px solid $green-color;
-    color: $green-color;
-    font-weight: 600;
-    text-decoration: none;
-    background: none;
-    text-align: left;
-    overflow: hidden;
-    position: relative;
-    transition: all 300ms ease-in-out;
-    cursor: pointer;
-
-    &:nth-of-type(1) {
-      margin-right: 20px;
-    }
-
-    &:hover {
-      background: $green-color;
-      color: black;
-    }
-  }
-}
-
-//Project End
 
 //Contact Start
 form {
@@ -958,37 +631,6 @@ footer {
     height: 70%;
   }
   //Skills End
-
-  //Project Start
-  .project-graphic-right {
-    width: 20%;
-    bottom: -15%;
-  }
-
-  .project-img-container {
-    a {
-      div {
-        &#clothing-website,
-        &#restaurant-website,
-        &.sort-algo-viz,
-        &#bug-tracker-website,
-        &#cellphone-repair-website {
-          &::after {
-            font-size: 16px;
-          }
-        }
-      }
-    }
-  }
-
-  // .individual-project-information {
-  //   h3 {
-  //     span {
-  //       font-size: 28px;
-  //     }
-  //   }
-  // }
-  //Project End
 }
 
 @media screen and (max-width: 768px) {
@@ -1035,50 +677,6 @@ footer {
     height: 60%;
   }
   //Skills End
-
-  //Projects Start
-
-  .project-graphic-right {
-    width: 15%;
-    height: 12%;
-  }
-
-  .individual-project-made-with {
-    ul {
-      li {
-        font-size: 12px;
-      }
-    }
-  }
-
-  .project-img-container {
-    a {
-      div {
-        &#clothing-website,
-        &#restaurant-website,
-        &.sort-algo-viz,
-        &#bug-tracker-website,
-        &#cellphone-repair-website {
-          &::after {
-            font-size: 1.8vw;
-          }
-        }
-      }
-    }
-  }
-
-  // .individual-project-information {
-  //   h3 {
-  //     span {
-  //       font-size: 20px;
-  //     }
-  //   }
-  // }
-
-  .individual-project-description-links-container {
-    font-size: 12px;
-  }
-  //Projects End
 }
 
 @media screen and (max-width: 600px) {
@@ -1170,72 +768,6 @@ footer {
     height: 50%;
   }
   //Skills End
-
-  //Projects Start
-
-  .project-graphic-right {
-    width: 25%;
-    height: 15%;
-  }
-
-  .project-information-section {
-    padding: 20px 0px;
-  }
-
-  .individual-project-information {
-    h3 {
-      span {
-        font-size: 4vw;
-      }
-    }
-  }
-
-  .project-img-container {
-    a {
-      div {
-        &#clothing-website,
-        &#restaurant-website,
-        &.sort-algo-viz,
-        &#bug-tracker-website,
-        &#cellphone-repair-website {
-          &::after {
-            font-size: 3.8vw;
-          }
-        }
-      }
-    }
-  }
-
-  .individual-project-img-container {
-    img {
-      width: 80%;
-    }
-  }
-
-  .individual-project-made-with {
-    h5 {
-      font-size: 20px;
-    }
-  }
-
-  .individual-project-description-links-container {
-    h5 {
-      font-size: 20px;
-    }
-
-    p {
-      text-align: center;
-    }
-  }
-  .project-type-title {
-    font-size: 28px;
-  }
-
-  .project-img-container {
-    margin-bottom: 30px;
-  }
-
-  //Projects End
 }
 
 @media screen and (max-width: 400px) {
@@ -1265,25 +797,6 @@ footer {
     }
   }
   //Skills End
-
-  //Project Start
-
-  .individual-project-information {
-    h3 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      span {
-        font-size: 5vw;
-      }
-    }
-  }
-
-  .project-graphic-right {
-    width: 20%;
-    height: 10%;
-  }
-  //Project End
 }
 
 @keyframes dash {
