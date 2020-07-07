@@ -618,17 +618,84 @@ nav .container {
   margin-bottom: 100px;
 }
 
+.project-img-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .project-img-container img {
   height: 100%;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   margin: auto;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  z-index: 0;
 }
 
-.project-img-container img:hover {
-  -webkit-filter: brightness(80%);
-          filter: brightness(80%);
+.project-img-container a div#clothing-website::after, .project-img-container a div#restaurant-website::after, .project-img-container a div.sort-algo-viz::after, .project-img-container a div#bug-tracker-website::after, .project-img-container a div#cellphone-repair-website::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2vw;
+  opacity: 0;
+  color: white;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  z-index: 10;
+}
+
+.project-img-container a div#clothing-website::after {
+  content: 'Clothing Website';
+}
+
+.project-img-container a div#restaurant-website::after {
+  content: 'Restaurant Website';
+}
+
+.project-img-container a div.sort-algo-viz::after {
+  content: 'Sorting Algorithm Visualizer';
+}
+
+.project-img-container a div#bug-tracker-website::after {
+  content: 'Bug Tracker';
+}
+
+.project-img-container a div#cellphone-repair-website::after {
+  content: 'Cellphone Repair Website';
+}
+
+.project-img-container:hover img {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
+.project-img-container:hover a div#clothing-website::after, .project-img-container:hover a div#restaurant-website::after, .project-img-container:hover a div.sort-algo-viz::after, .project-img-container:hover a div#bug-tracker-website::after, .project-img-container:hover a div#cellphone-repair-website::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 .project-info {
@@ -963,6 +1030,9 @@ footer h3 {
     width: 20%;
     bottom: -15%;
   }
+  .project-img-container a div#clothing-website::after, .project-img-container a div#restaurant-website::after, .project-img-container a div.sort-algo-viz::after, .project-img-container a div#bug-tracker-website::after, .project-img-container a div#cellphone-repair-website::after {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -997,6 +1067,9 @@ footer h3 {
   }
   .individual-project-made-with ul li {
     font-size: 12px;
+  }
+  .project-img-container a div#clothing-website::after, .project-img-container a div#restaurant-website::after, .project-img-container a div.sort-algo-viz::after, .project-img-container a div#bug-tracker-website::after, .project-img-container a div#cellphone-repair-website::after {
+    font-size: 1.8vw;
   }
   .individual-project-description-links-container {
     font-size: 12px;
@@ -1070,6 +1143,9 @@ footer h3 {
   }
   .individual-project-information h3 span {
     font-size: 4vw;
+  }
+  .project-img-container a div#clothing-website::after, .project-img-container a div#restaurant-website::after, .project-img-container a div.sort-algo-viz::after, .project-img-container a div#bug-tracker-website::after, .project-img-container a div#cellphone-repair-website::after {
+    font-size: 3.8vw;
   }
   .individual-project-img-container img {
     width: 80%;

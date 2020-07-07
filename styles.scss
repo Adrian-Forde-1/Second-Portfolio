@@ -584,14 +584,90 @@ nav {
 }
 
 .project-img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   img {
     height: 100%;
     width: 100%;
     object-fit: contain;
     margin: auto;
+    transition: all 300ms ease-in-out;
+    z-index: 0;
+  }
 
-    &:hover {
-      filter: brightness(80%);
+  a {
+    div {
+      &#clothing-website,
+      &#restaurant-website,
+      &.sort-algo-viz,
+      &#bug-tracker-website,
+      &#cellphone-repair-website {
+        &::after {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.2vw;
+          opacity: 0;
+          color: white;
+          transform: translateY(-20px);
+          transition: all 300ms ease-in-out;
+          z-index: 10;
+        }
+      }
+
+      &#clothing-website {
+        &::after {
+          content: 'Clothing Website';
+        }
+      }
+      &#restaurant-website {
+        &::after {
+          content: 'Restaurant Website';
+        }
+      }
+      &.sort-algo-viz {
+        &::after {
+          content: 'Sorting Algorithm Visualizer';
+        }
+      }
+      &#bug-tracker-website {
+        &::after {
+          content: 'Bug Tracker';
+        }
+      }
+      &#cellphone-repair-website {
+        &::after {
+          content: 'Cellphone Repair Website';
+        }
+      }
+    }
+  }
+
+  &:hover {
+    img {
+      filter: brightness(50%);
+    }
+
+    a {
+      div {
+        &#clothing-website,
+        &#restaurant-website,
+        &.sort-algo-viz,
+        &#bug-tracker-website,
+        &#cellphone-repair-website {
+          &::after {
+            opacity: 1;
+            transform: translateY(0px);
+          }
+        }
+      }
     }
   }
 }
@@ -889,6 +965,22 @@ footer {
     bottom: -15%;
   }
 
+  .project-img-container {
+    a {
+      div {
+        &#clothing-website,
+        &#restaurant-website,
+        &.sort-algo-viz,
+        &#bug-tracker-website,
+        &#cellphone-repair-website {
+          &::after {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
   // .individual-project-information {
   //   h3 {
   //     span {
@@ -955,6 +1047,22 @@ footer {
     ul {
       li {
         font-size: 12px;
+      }
+    }
+  }
+
+  .project-img-container {
+    a {
+      div {
+        &#clothing-website,
+        &#restaurant-website,
+        &.sort-algo-viz,
+        &#bug-tracker-website,
+        &#cellphone-repair-website {
+          &::after {
+            font-size: 1.8vw;
+          }
+        }
       }
     }
   }
@@ -1078,6 +1186,22 @@ footer {
     h3 {
       span {
         font-size: 4vw;
+      }
+    }
+  }
+
+  .project-img-container {
+    a {
+      div {
+        &#clothing-website,
+        &#restaurant-website,
+        &.sort-algo-viz,
+        &#bug-tracker-website,
+        &#cellphone-repair-website {
+          &::after {
+            font-size: 3.8vw;
+          }
+        }
       }
     }
   }
