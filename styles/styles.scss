@@ -1,5 +1,5 @@
-@import 'variables';
-@import '_Project.scss';
+@import "variables";
+@import "_Project.scss";
 
 * {
   margin: 0px;
@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #202124;
   overflow-x: hidden;
   color: white;
@@ -107,7 +107,7 @@ nav {
   z-index: -1;
 
   &::before {
-    content: '';
+    content: "";
     width: 20px;
     height: 20px;
     position: absolute;
@@ -350,7 +350,7 @@ nav {
   // border-radius: 20px;
 
   &::before {
-    content: '';
+    content: "";
     background: linear-gradient(90deg, $blue-color, $green-color);
     width: 100%;
     height: 0;
@@ -384,7 +384,7 @@ nav {
 .header-graphic-left {
   width: 25%;
   height: 80%;
-  background-image: url('../imgs/Header_Graphic_Left.svg');
+  background-image: url("../imgs/Header_Graphic_Left.svg");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -396,7 +396,7 @@ nav {
 .header-graphic-mid {
   width: 20%;
   height: 20%;
-  background-image: url('../imgs/Header_Graphic_Mid.svg');
+  background-image: url("../imgs/Header_Graphic_Mid.svg");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -406,7 +406,7 @@ nav {
   z-index: -1;
 }
 .header-graphic-right {
-  background-image: url('../imgs/Header_Graphic_Right.svg');
+  background-image: url("../imgs/Header_Graphic_Right.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 6%;
@@ -439,7 +439,7 @@ nav {
   position: absolute;
   top: -15%;
   left: -8%;
-  background-image: url('../imgs/Dots.svg');
+  background-image: url("../imgs/Dots.svg");
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
@@ -451,7 +451,7 @@ nav {
   position: absolute;
   bottom: -20%;
   right: -8%;
-  background-image: url('../imgs/Dots.svg');
+  background-image: url("../imgs/Dots.svg");
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
@@ -746,6 +746,15 @@ footer {
     width: 40%;
   }
   //Section End
+
+  //About Me Start
+
+  .about-me-graphic-left,
+  .about-me-graphic-right {
+    width: 150px;
+    height: 150px;
+  }
+  //About Me End
 
   //Skills Start
   .skills-group {

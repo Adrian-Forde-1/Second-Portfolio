@@ -491,7 +491,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #202124;
   overflow-x: hidden;
   color: white;
@@ -589,7 +589,7 @@ nav .container {
 }
 
 .section-name-decoration::before {
-  content: '';
+  content: "";
   width: 20px;
   height: 20px;
   position: absolute;
@@ -872,7 +872,7 @@ nav .container {
 }
 
 .cta::before {
-  content: '';
+  content: "";
   background: -webkit-gradient(linear, left top, right top, from(#64ffda), to(#92fe9d));
   background: linear-gradient(90deg, #64ffda, #92fe9d);
   width: 100%;
@@ -1241,6 +1241,11 @@ footer h3 {
   }
   .svg-section-name {
     width: 40%;
+  }
+  .about-me-graphic-left,
+  .about-me-graphic-right {
+    width: 150px;
+    height: 150px;
   }
   .skills-group {
     height: 200px;
