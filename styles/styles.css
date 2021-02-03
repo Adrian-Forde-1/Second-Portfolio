@@ -101,7 +101,7 @@
   z-index: 0;
 }
 
-.project-img-container a div#clothing-website::after, .project-img-container a div#restaurant-website::after, .project-img-container a div.sort-algo-viz::after, .project-img-container a div#bug-tracker-website::after, .project-img-container a div#cellphone-repair-website::after {
+.project-img-container a div#clothing-website::after, .project-img-container a div#restaurant-website::after, .project-img-container a div.sort-algo-viz::after, .project-img-container a div#issue-tracker-website::after, .project-img-container a div#cellphone-repair-website::after {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -127,23 +127,23 @@
 }
 
 .project-img-container a div#clothing-website::after {
-  content: 'Clothing Website';
+  content: "Clothing Website";
 }
 
 .project-img-container a div#restaurant-website::after {
-  content: 'Restaurant Website';
+  content: "Restaurant Website";
 }
 
 .project-img-container a div.sort-algo-viz::after {
-  content: 'Sorting Algorithm Visualizer';
+  content: "Sorting Algorithm Visualizer";
 }
 
-.project-img-container a div#bug-tracker-website::after {
-  content: 'Bug Tracker';
+.project-img-container a div#issue-tracker-website::after {
+  content: "Issue Tracker";
 }
 
 .project-img-container a div#cellphone-repair-website::after {
-  content: 'Cellphone Repair Website';
+  content: "Cellphone Repair Website";
 }
 
 .project-img-container:hover img {
@@ -151,7 +151,7 @@
           filter: brightness(50%);
 }
 
-.project-img-container:hover a div#clothing-website::after, .project-img-container:hover a div#restaurant-website::after, .project-img-container:hover a div.sort-algo-viz::after, .project-img-container:hover a div#bug-tracker-website::after, .project-img-container:hover a div#cellphone-repair-website::after {
+.project-img-container:hover a div#clothing-website::after, .project-img-container:hover a div#restaurant-website::after, .project-img-container:hover a div.sort-algo-viz::after, .project-img-container:hover a div#issue-tracker-website::after, .project-img-container:hover a div#cellphone-repair-website::after {
   opacity: 1;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
@@ -409,7 +409,7 @@
     width: 100%;
     text-align: center;
   }
-  .project-img-container a div#clothing-website::after, .project-img-container a div#restaurant-website::after, .project-img-container a div.sort-algo-viz::after, .project-img-container a div#bug-tracker-website::after, .project-img-container a div#cellphone-repair-website::after {
+  .project-img-container a div#clothing-website::after, .project-img-container a div#restaurant-website::after, .project-img-container a div.sort-algo-viz::after, .project-img-container a div#issue-tracker-website::after, .project-img-container a div#cellphone-repair-website::after {
     font-size: 16px;
   }
 }
@@ -422,7 +422,7 @@
   .individual-project-made-with ul li {
     font-size: 12px;
   }
-  .project-img-container a div#clothing-website::after, .project-img-container a div#restaurant-website::after, .project-img-container a div.sort-algo-viz::after, .project-img-container a div#bug-tracker-website::after, .project-img-container a div#cellphone-repair-website::after {
+  .project-img-container a div#clothing-website::after, .project-img-container a div#restaurant-website::after, .project-img-container a div.sort-algo-viz::after, .project-img-container a div#issue-tracker-website::after, .project-img-container a div#cellphone-repair-website::after {
     font-size: 1.8vw;
   }
   .individual-project-description-links-container {
@@ -438,7 +438,7 @@
   .individual-project-information h3 span {
     font-size: 4vw;
   }
-  .project-img-container a div#clothing-website::after, .project-img-container a div#restaurant-website::after, .project-img-container a div.sort-algo-viz::after, .project-img-container a div#bug-tracker-website::after, .project-img-container a div#cellphone-repair-website::after {
+  .project-img-container a div#clothing-website::after, .project-img-container a div#restaurant-website::after, .project-img-container a div.sort-algo-viz::after, .project-img-container a div#issue-tracker-website::after, .project-img-container a div#cellphone-repair-website::after {
     font-size: 3.8vw;
   }
   .individual-project-img-container img {

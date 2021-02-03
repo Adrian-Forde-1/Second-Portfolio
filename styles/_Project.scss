@@ -15,7 +15,7 @@
 .project-graphic-left {
   width: 50%;
   height: 50%;
-  background-image: url('../imgs/Project_Graphic_Left.svg');
+  background-image: url("../imgs/Project_Graphic_Left.svg");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -28,7 +28,7 @@
 .project-graphic-mid {
   width: 35%;
   height: 35%;
-  background-image: url('../imgs/Project_Graphic_Mid.svg');
+  background-image: url("../imgs/Project_Graphic_Mid.svg");
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.8;
@@ -41,7 +41,7 @@
 .project-graphic-right {
   width: 15%;
   height: 20%;
-  background-image: url('../imgs/Project_Graphic_Right.svg');
+  background-image: url("../imgs/Project_Graphic_Right.svg");
   background-size: contain;
   opacity: 0.5;
   background-repeat: no-repeat;
@@ -88,7 +88,7 @@
       &#clothing-website,
       &#restaurant-website,
       &.sort-algo-viz,
-      &#bug-tracker-website,
+      &#issue-tracker-website,
       &#cellphone-repair-website {
         &::after {
           width: 100%;
@@ -110,27 +110,27 @@
 
       &#clothing-website {
         &::after {
-          content: 'Clothing Website';
+          content: "Clothing Website";
         }
       }
       &#restaurant-website {
         &::after {
-          content: 'Restaurant Website';
+          content: "Restaurant Website";
         }
       }
       &.sort-algo-viz {
         &::after {
-          content: 'Sorting Algorithm Visualizer';
+          content: "Sorting Algorithm Visualizer";
         }
       }
-      &#bug-tracker-website {
+      &#issue-tracker-website {
         &::after {
-          content: 'Bug Tracker';
+          content: "Issue Tracker";
         }
       }
       &#cellphone-repair-website {
         &::after {
-          content: 'Cellphone Repair Website';
+          content: "Cellphone Repair Website";
         }
       }
     }
@@ -146,7 +146,7 @@
         &#clothing-website,
         &#restaurant-website,
         &.sort-algo-viz,
-        &#bug-tracker-website,
+        &#issue-tracker-website,
         &#cellphone-repair-website {
           &::after {
             opacity: 1;
@@ -364,7 +364,7 @@
         &#clothing-website,
         &#restaurant-website,
         &.sort-algo-viz,
-        &#bug-tracker-website,
+        &#issue-tracker-website,
         &#cellphone-repair-website {
           &::after {
             font-size: 16px;
@@ -399,7 +399,7 @@
         &#clothing-website,
         &#restaurant-website,
         &.sort-algo-viz,
-        &#bug-tracker-website,
+        &#issue-tracker-website,
         &#cellphone-repair-website {
           &::after {
             font-size: 1.8vw;
@@ -436,7 +436,7 @@
         &#clothing-website,
         &#restaurant-website,
         &.sort-algo-viz,
-        &#bug-tracker-website,
+        &#issue-tracker-website,
         &#cellphone-repair-website {
           &::after {
             font-size: 3.8vw;
