@@ -10,13 +10,14 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #202124;
+  background: $dark-color;
+  background: url("../imgs/website-bg.png");
   overflow-x: hidden;
   color: white;
 
   &::-webkit-scrollbar {
     width: 10px;
-    background: #181818;
+    background: #141414;
   }
 
   &::-webkit-scrollbar-thumb {
@@ -40,7 +41,7 @@ nav {
 
   &.sticky {
     position: fixed;
-    background: #1e1e1e;
+    background: $dark-color;
   }
 }
 
@@ -126,7 +127,7 @@ nav {
   width: 100%;
   height: 100vh;
   position: fixed;
-  background: #202124;
+  background: $dark-color;
   top: 0;
   left: 0;
   pointer-events: none;
@@ -155,7 +156,7 @@ nav {
 
     li {
       flex-grow: 1;
-      background: #202124;
+      background: $dark-color;
       transform-origin: left;
       transform: scaleX(0);
     }
@@ -193,7 +194,7 @@ nav {
   position: absolute;
   width: 100%;
   height: 100vh;
-  background: #1e1e1e;
+  background: $dark-color;
   z-index: 1100;
 }
 
@@ -364,7 +365,7 @@ nav {
 
   &:hover {
     cursor: pointer;
-    color: #202124;
+    color: $dark-color;
 
     &::before {
       height: 400%;
@@ -425,7 +426,7 @@ nav {
   p {
     text-align: center;
     box-shadow: 2px 2px 5px #2c2b2b;
-    background: #181818;
+    background: #141414;
     position: relative;
     padding: 50px;
     display: block;
@@ -465,7 +466,7 @@ nav {
   height: 300px;
   position: relative;
   margin-bottom: 50px;
-  box-shadow: 2px 2px 5px #181818;
+  box-shadow: 2px 2px 5px #141414;
   overflow-x: hidden;
 }
 
@@ -474,7 +475,7 @@ nav {
   height: 100%;
   position: absolute;
   right: 0%;
-  background: #181818;
+  background: #141414;
 }
 
 .skill-group-information {
@@ -566,7 +567,7 @@ footer {
   width: 100vw;
   height: 30vh;
   padding: 5px;
-  background: #1e1e1e;
+  background: $dark-color;
   h3 {
     text-align: center;
     font-size: 26px;
@@ -611,7 +612,7 @@ footer {
       position: fixed !important;
       top: 0 !important;
       right: 0 !important;
-      background-color: #181818 !important;
+      background-color: #141414 !important;
       display: flex !important;
       flex-direction: column !important;
       justify-content: space-evenly !important;
